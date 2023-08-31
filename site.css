@@ -1,0 +1,125 @@
+/*---------- Login Form ----------*/
+.form-popup{
+
+    display: none;
+
+}
+
+#loginTxt{
+
+    color: black;
+
+}
+
+/*---------- Navbar Items ----------*/
+.topbar{
+
+    overflow: hidden;
+    position: fixed;
+
+}
+
+.topbar a{
+
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.topbar a:hover{
+
+    background-color: #ddd;
+    color: black;
+
+}
+
+.topbar .icon{
+
+    display: none;
+
+}
+
+@media screen and (max-width: 1200px){
+
+    .topbar ul {display: none;}
+
+    .topbar a.icon {
+      float: right;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .topbar.responsive {position: relative;}
+    .topbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topbar.responsive ul {
+      display: block;
+    }
+}
+
+#mbLogo{
+
+    height: 20%;
+
+}
+
+/*---------- Body Sections ---------- */
+#landingPage{
+
+    background-image: url("images/image1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#aboutUs{
+
+    background-image: url("images/image2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#attractions{
+
+    background-image: url("images/image3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#contactUs{
+
+    background-image: url("images/image4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#registration{
+
+    background-image: url("images/image5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#landingPage, #aboutUs, #attractions, #contactUs, #registration{
+
+    height: 100vh;
+    background-size: cover;
+    
+
+}
+
+#landingPageText{
+
+    color: white;
+
+}
