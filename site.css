@@ -5,6 +5,16 @@
 
 }
 
+.create-account-form-popup{
+
+    display: none;
+    position: fixed;
+    right: 0;
+    border: 3px solid black;
+    z-index: 9;
+
+}
+
 #loginTxt{
 
     color: black;
