@@ -1,8 +1,11 @@
 /*---------- Login Form ----------*/
-.form-popup{
+.login-form-popup{
 
     display: none;
-
+    position: fixed;
+    right: 0;
+    border: 3px solid black;
+    z-index: 9;
 }
 
 .create-account-form-popup{
@@ -12,6 +15,14 @@
     right: 0;
     border: 3px solid black;
     z-index: 9;
+
+}
+
+#loginForm, #createAccountForm{
+
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
 
 }
 

@@ -1,17 +1,47 @@
 
 
 <!-- The form -->
-<div class="form-popup" id="loginForm">
-  <form action="/loginActions.php" class="form-container" method="post">
+<div class="login-form-popup" id="loginForm">
+  <form id="loginForm" action="/loginActions.php" method="post">
     <h1>Login</h1>
 
-    <label id="loginTxt" for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="userName" required>
+    <div class="form-outline mb-4">
 
-    <label id="loginTxt" for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="passwordTxt" required>
+      <label class="form-label" id="loginTxt" for="userName"><b>Username</b></label>
+      <input type="text" class="form-control" placeholder="Username.." name="userName" required>
 
-    <button id="loginTxt" type="submit" class="btn">Login</button>
-    <button id="loginTxt" type="button" class="btn cancel" onclick="closeLogin()">Close</button>
+    </div>
+
+    <div class="form-outline mb-4">
+
+      <label id="loginTxt" for="password"><b>Password</b></label>
+      <input type="password" class="form-control" placeholder="Password.." name="passwordTxt" required>
+
+    </div>
+
+    <div class="row mb-4 text-center">
+
+      <div class="col">
+
+        <a href="#!">Forgot Password?</a>
+
+      </div>
+
+    </div>
+
+    <div class="text-center">
+
+      <button class="btn btn-primary btn-block mb-4" id="loginTxt" type="submit" class="btn">Login</button>
+
+      <button class="btn btn-danger btn-block mb-4" id="loginTxt" type="button" class="btn cancel" onclick="closeLogin()">Close</button>
+
+    </div>
+
+    <div class="text-center">
+
+      <p>No Account?<br> <button type="button" onclick="showCreateAccountForm()">Register Here</button></p>
+
+    </div>
+
   </form>
 </div>
