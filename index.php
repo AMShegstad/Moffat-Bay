@@ -80,7 +80,8 @@
 
             <?php
 
-                readfile('loginPage.php');
+                include 'loginPage.php';
+                include 'createAccountForm.php';
 
             ?>
 
