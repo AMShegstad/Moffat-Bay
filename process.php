@@ -5,14 +5,14 @@ require_once('config.php');
 
 if(isset($_POST)){
 
-	$firstname 		= $_POST['firstname'];
-	$lastname 		= $_POST['lastname'];
-	$email 			= $_POST['email'];
-	$phonenumber	= $_POST['phonenumber'];
-	$pass 			= $_POST['pass'];
+	$firstname 		= $_POST['firstName'];
+	$lastname 		= $_POST['lastName'];
+	$email 			= $_POST['emailTxt'];
+	$phonenumber	= $_POST['phoneNumber'];
+	$pass 			= $_POST['passwordTxt'];
 	$hashpassword = password_hash($pass, PASSWORD_DEFAULT, array('cost'=>9));
 
-		$sql = "INSERT INTO users (firstname, lastname, email, phonenumber, pass ) VALUES(?,?,?,?,?)";
+		$sql = "INSERT INTO Customers (firstName, lastName, email, phone, pass ) VALUES(?,?,?,?,?)";
 		$stmtinsert = $db->prepare($sql);
 		$result = $stmtinsert->execute([$firstname, $lastname, $email, $phonenumber, $hashpassword]);
 		if($result){
