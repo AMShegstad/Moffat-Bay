@@ -2,7 +2,7 @@
 
 <!-- The form -->
 <div class="login-form-popup" id="loginForm">
-  <form id="loginForm" action="/capstone_project_test/process.php" method="post">
+  <form id="loginForm" action="/moffat-bay/process.php" method="post">
     <h1>Login</h1>
 
     <div class="form-outline mb-4">

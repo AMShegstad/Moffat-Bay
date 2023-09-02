@@ -2,7 +2,7 @@
 
 <!-- The form -->
 <div class="create-account-form-popup" id="createAccountForm">
-  <form id="createAccountForm" action="/capstone_project_test/process.php" method="post">
+  <form id="createAccountForm" action="/moffat-bay/process.php" method="post">
     <h1>Create Account</h1>
 
     <div class="form-outline mb-4">
