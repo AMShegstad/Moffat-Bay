@@ -2,7 +2,7 @@
 
 <!-- The form -->
 <div class="create-account-form-popup" id="createAccountForm">
-  <form id="createAccountForm" action="/loginActions.php" method="post">
+  <form id="createAccountForm" action="/capstone_project_test/process.php" method="post">
     <h1>Create Account</h1>
 
     <div class="form-outline mb-4">
@@ -25,6 +25,14 @@
       <input type="text" class="form-control" placeholder="Last Name.." name="lastName" required>
 
     </div>
+
+    <div class="form-outline mb-4">
+
+      <label class="form-label" id="loginTxt" for="phoneNumber"><b>Phone Number</b></label>
+      <input type="text" class="form-control" placeholder="Phone number..." name="phoneNumber" required>
+
+</div>
+
 
     <div class="form-outline mb-4">
 
