@@ -1,5 +1,5 @@
 /*---------- Login Form ----------*/
-.login-form-popup{
+.login-form-popup, .logoutForm-popup{
 
     display: none;
     position: fixed;
@@ -26,9 +26,21 @@
 
 }
 
+#createAccountForm{
+
+    overflow: scroll;
+
+}
+
 #loginTxt{
 
     color: black;
+
+}
+
+#subBtn{
+
+    color: white;
 
 }
 

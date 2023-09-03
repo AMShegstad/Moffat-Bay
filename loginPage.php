@@ -1,14 +1,38 @@
+<?php
 
+if(! empty($_SESSION["login"])){
 
-<!-- The form -->
+  ?>
+
+    
+    <!-- The form -->
+    <div class="login-form-popup" id="loginForm">
+      <form id="loginForm">
+
+        <div class="form-outline mb-4">
+
+        <a href="logout.php">Logout</a>
+
+        </div>
+
+      </form>
+    </div>
+
+<?php
+
+}else{
+
+  ?>
+
+    <!-- The form -->
 <div class="login-form-popup" id="loginForm">
-  <form id="loginForm" action="/moffat-bay/process.php" method="post">
+  <form id="loginForm" action="/moffat-bay/loginActions.php" method="post">
     <h1>Login</h1>
 
     <div class="form-outline mb-4">
 
-      <label class="form-label" id="loginTxt" for="userName"><b>Username</b></label>
-      <input type="text" class="form-control" placeholder="Username.." name="userName" required>
+      <label class="form-label" id="loginTxt" for="emailInput"><b>Email</b></label>
+      <input type="text" class="form-control" placeholder="Email.." name="emailTxt" required>
 
     </div>
 
@@ -45,3 +69,9 @@
 
   </form>
 </div>
+
+  <?php
+
+}
+
+?>

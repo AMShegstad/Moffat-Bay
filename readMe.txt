@@ -1,1 +1,1 @@
-'Sup fool!?
+Why are you reading this?

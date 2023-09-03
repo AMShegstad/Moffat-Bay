@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['login'])){
+
+    $text = "Welcome " . $_SESSION['login'];
+
+}else{
+
+    $text = "Login/Sign-Up";
+
+}
+
+?>
+
 
 <!DOCTYPE html>
 
@@ -64,7 +80,7 @@
 
                     <ul class="nav navbar-nav navbar-right mx-3">
 
-                        <a class="nav-link" onclick="showLogin()"><span class="fas fa-sign-in-alt"></span>Login/SignUp</a>
+                        <a class="nav-link" onclick="showLogin()"><span class="fas fa-sign-in-alt"></span><?php echo $text; ?></a>
 
                     </ul>
             

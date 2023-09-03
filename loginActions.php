@@ -1,27 +1,42 @@
 <?php
-require_once('databaseConnection.php');
-?>
-<?php
+
+session_start();
+include 'databaseConnection.php';
 
 if(isset($_POST)){
 
-	$firstname 		= $_POST['firstName'];
-	$lastname 		= $_POST['lastName'];
-	$email 			= $_POST['email'];
-	$phone			= $_POST['phone'];
-	$pass 			= $_POST['pass'];
-	$hashpassword = password_hash($pass, PASSWORD_DEFAULT, array('cost'=>9));
+    $inputEmail = $_POST['emailTxt'];
 
-		$sql = "INSERT INTO customers (firstName, lastName, email, phone, pass ) VALUES(?,?,?,?,?)";
-		$stmtinsert = $dbDatabase->prepare($sql);
-		$result = $stmtinsert->execute([$firstname, $lastname, $email, $phone, $hashpassword]);
-		if($result){
-			echo 'Successfully saved.';
-		}else{
-			echo 'There were errors while saving the data.';
-		}
-}else{
-	echo 'No data';
+    $inputPassword = $_POST['passwordTxt'];
+
+    $usersSql = "SELECT email, pass, firstName FROM customers;";
+
+    $users = $conn->query($usersSql);
+
+    $fName = "";
+
+    if($users->num_rows > 0){
+
+        while($row = $users->fetch_assoc()){
+
+            if($row['email'] == $inputEmail){
+
+              if(password_verify($inputPassword, $row['pass'])){
+
+                $_SESSION["login"]=$row['firstName'];
+
+                $fName = $row['firstName'];
+
+                header("Location: index.php");
+
+              }
+
+            }
+
+        }
+
+    }
+	
 }
 
 // need to put <?php tags around this
