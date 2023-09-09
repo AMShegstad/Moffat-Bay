@@ -111,14 +111,6 @@
     background-position: center center;
 }
 
-#aboutUs{
-
-    background-image: url("images/image2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
 #attractions{
 
     background-image: url("images/image3.jpg");
@@ -143,7 +135,7 @@
     background-position: center center;
 }
 
-#landingPage, #aboutUs, #attractions, #contactUs, #registration{
+#landingPage, #attractions, #contactUs, #registration{
 
     height: 100vh;
     background-size: cover;
@@ -155,4 +147,33 @@
 
     color: white;
 
+}
+
+.about-us-wrap{
+    overflow: hidden;
+    position: relative;
+}
+
+.about-us-bg{
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.about-content {
+    position: relative
+}
+
+.form-row {
+    margin-bottom: 10px;
+}
+
+.form-input {
+    display: block;
+}
+
+.form-error {
+    color: red;
 }

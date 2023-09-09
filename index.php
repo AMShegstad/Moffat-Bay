@@ -141,7 +141,24 @@ if(isset($_SESSION['login'])){
 
             <section class="section mt-5 text-center" id="aboutUs">
 
-            
+                <div class="about-us-wrap">
+                    <img class="about-us-bg" src="" alt="">
+                
+                    <div class="about-content">
+                        <h1>About Us</h1>
+                        <h2>Our Location</h2>
+
+                        <p>The Moffat Bay Lodge and Marina is a luxurious, 118 acre private retreat nestled on the southern shore of Joviedsa Island. The lodge overlooks the pristine beauty of the Moffat Bay which is the starting point for many vessels traveling across the seas.</p>
+
+                        <p>The main Lodge features spacious updated rooms, as well as an indoor pool, and lounge ran by ICE certified mixologist Dwayne Denair. Laundry service is availible on weekdays. Updated rooms include kitchenettes, private bathrooms, electric fireplaces, air conditioning, hard wood floors throughout, vaulted ceilings with extravagant woodwork from local sculptors, private porch  area, 65" flat screen televisions, and fiber internet connection.</p>
+
+                        <p>The surrounding area provides guests with the opportunity to see deer, wild turkey, beaver, ducks, red tail hawks, red tail fox, Canadian geese, American Bald Eagle, and the black-footed ferret all in thier natural habitat. All we ask is that your interactions with the native wildlife be limited to your camera shutters.</p>
+
+                        <h2>Our History</h2>
+                        <p>First Nations Development Committee was founded in 2020 by four friends Alexander Shegsted, Bryan Motten, Andrew McCloud, and Timmy Bell. After extreme consideration on locations the friends decided on Moffat Bay. Plans were presented and approved by the Joviedsa Island Council in 2022. Construction began in February 2023 and is nearing completion for this coming season.</p>
+                        
+                    </div>
+                </div>    
 
             </section>
 
@@ -154,7 +171,6 @@ if(isset($_SESSION['login'])){
             <section class="section mt-5 text-center" id="contactUs">
 
             
-
             </section>
 
             <section class="section mt-5 text-center" id="registration">
