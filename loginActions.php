@@ -9,7 +9,7 @@ if(isset($_POST)){
 
     $inputPassword = $_POST['passwordTxt'];
 
-    $usersSql = "SELECT email, pass, firstName FROM customers;";
+    $usersSql = "SELECT customerID, email, pass, firstName, lastName FROM customers;";
 
     $users = $conn->query($usersSql);
 
@@ -23,9 +23,13 @@ if(isset($_POST)){
 
               if(password_verify($inputPassword, $row['pass'])){
 
-                $_SESSION["login"]=$row['firstName'];
+                $_SESSION['login']=$row['firstName'];
 
-                $fName = $row['firstName'];
+                $_SESSION['lastName']=$row['lastName'];
+
+                $_SESSION['emailAddress'] = $row['email'];
+
+                $_SESSION['customerID'] = $row['customerID'];
 
                 header("Location: index.php");
 
