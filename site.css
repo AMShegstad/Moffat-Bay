@@ -135,7 +135,7 @@
     background-position: center center;
 }
 
-#registration{
+#registrationImage{
 
     background-image: url("images/image5.jpg");
     background-size: cover;
@@ -143,16 +143,56 @@
     background-position: center center;
 }
 
-#landingPage, #aboutUs, #attractions, #contactUs, #registration{
+#landingPage, #aboutUs, #attractions, #contactUs, #registrationContainer {
 
     height: 100vh;
     background-size: cover;
-    
 
 }
 
-#landingPageText{
+#landingPageText {
 
     color: white;
 
+}
+
+/*---------- Reservation Summary page----------*/
+#thanks {
+    background-image: url("images/image5.jpg");
+    background-size: cover;
+    min-height: 500px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#form {
+    align-items: center;
+    min-height: 500px;
+    width: 50%;
+}
+
+form {
+    padding: 10%;
+    align-items: center;
+}
+
+.registration {
+    border: 3px solid #fff;
+    padding: 15px;
+}
+
+#registrationContainer {
+    border: 3px solid #fff;
+    padding: 10px;
+}
+
+.registrationChild {
+    width:40%;
+    float: left;
+    padding: 10px;
+}
+
+#space {
+    min-height: 25px;
 }

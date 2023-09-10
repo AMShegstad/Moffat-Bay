@@ -69,7 +69,7 @@ if(isset($_SESSION['login'])){
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#registration">Registration</a>
+                            <a class="nav-link" href="#registrationContainer">Reservation</a>
                         </li>
 
                     </ul>
@@ -151,16 +151,40 @@ if(isset($_SESSION['login'])){
 
             </section>
 
-            <section class="section mt-5 text-center" id="contactUs">
+            <section class="section mt-5 text-center" id="registrationContainer">
 
-            
+                <div class="registrationChild" id="thanks">
+
+                </div>
+
+                <div class="registrationChild" id="form">
+
+                    <form action="reservationSummary.php" method="POST">
+                        <select name="roomConfig">
+                            <option value="">Select room configuration:</option>
+                            <option value="1">Double Full</option>
+                            <option value="2">Queen</option>
+                            <option value="3">Double Queen</option>
+                            <option value="4">King</option>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="checkIn"> Start Date: </label>
+                        <input type="date" name="checkIn"><br>
+                        <br>
+                        <label for="checkOut"> End Date: </label>
+                        <input type="date" name="checkOut"><br>
+                        <br>
+                        <button class="btn btn-primary btn-block" id="reserve" type="submit">Reserve Now!</button>
+                    </form>
+                    <br>
+
+                </div>
 
             </section>
 
-            <section class="section mt-5 text-center" id="registration">
-
-
-
+            <section id="space">
+                <a href="sessionTest.php">Testing the session variables</a>
             </section>
 
         </div>
