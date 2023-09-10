@@ -111,14 +111,6 @@
     background-position: center center;
 }
 
-#aboutUs{
-
-    background-image: url("images/image2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
 #attractions{
 
     background-image: url("images/image3.jpg");
@@ -135,7 +127,7 @@
     background-position: center center;
 }
 
-#registrationImage{
+#registration{
 
     background-image: url("images/image5.jpg");
     background-size: cover;
@@ -143,56 +135,45 @@
     background-position: center center;
 }
 
-#landingPage, #aboutUs, #attractions, #contactUs, #registrationContainer {
+#landingPage, #attractions, #contactUs, #registration{
 
     height: 100vh;
     background-size: cover;
+    
 
 }
 
-#landingPageText {
+#landingPageText{
 
     color: white;
 
 }
 
-/*---------- Reservation Summary page----------*/
-#thanks {
-    background-image: url("images/image5.jpg");
-    background-size: cover;
-    min-height: 500px;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-position: center center;
+.about-us-wrap{
+    overflow: hidden;
+    position: relative;
 }
 
-#form {
-    align-items: center;
-    min-height: 500px;
-    width: 50%;
+.about-us-bg{
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.about-content {
+    position: relative
 }
 
-form {
-    padding: 10%;
-    align-items: center;
+.form-row {
+    margin-bottom: 10px;
 }
 
-.registration {
-    border: 3px solid #fff;
-    padding: 15px;
+.form-input {
+    display: block;
 }
 
-#registrationContainer {
-    border: 3px solid #fff;
-    padding: 10px;
-}
-
-.registrationChild {
-    width:40%;
-    float: left;
-    padding: 10px;
-}
-
-#space {
-    min-height: 25px;
+.form-error {
+    color: red;
 }
