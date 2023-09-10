@@ -1,5 +1,9 @@
 <?php
 
+/* 
+Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
+*/
+
 include 'process.php';
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){

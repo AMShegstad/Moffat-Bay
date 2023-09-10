@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+    / 
+    Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
+
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Contact Us Page</title>

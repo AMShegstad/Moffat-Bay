@@ -1,3 +1,10 @@
+
+<!--
+   
+  Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
+
+ -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- The form -->

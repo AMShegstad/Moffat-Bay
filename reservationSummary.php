@@ -128,7 +128,7 @@
             $_SESSION['codString'] = date_format($_SESSION['checkOutDate'], "y/m/d");
             $_SESSION['days'] = $_SESSION['checkOutDate']->diff($_SESSION['checkInDate'])->format('%a');
 
-            if ($_SESSION['roomConfig'] % 2 == 0){
+            if ($_POST['roomConfig'] == "1" || $_POST['roomConfig'] == 3){
                 $_SESSION['reservationCost'] = $_SESSION['days'] * 115.00;
             } else {
                 $_SESSION['reservationCost'] = $_SESSION['days'] * 150.00;

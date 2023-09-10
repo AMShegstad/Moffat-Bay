@@ -13,7 +13,7 @@
         echo "{$_SESSION['emailAddress']}<br>";
         echo "{$_SESSION['customerID']}<br>";
         echo "{$_SESSION['roomConfig']}<br>";
-        echo "{$_SESSION['checkOutDate']}<br>";
+        echo "{$_SESSION['codString']}<br>";
     ?>
 
     <a href="index.php">Back to index.php</a>

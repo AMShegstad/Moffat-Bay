@@ -65,11 +65,7 @@ if(isset($_SESSION['login'])){
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#contactUs">Contact Us</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#registration">Reservation</a>
+                            <a class="nav-link" href="#registrationContainer">Reservation</a>
                         </li>
 
                     </ul>
@@ -146,6 +142,7 @@ if(isset($_SESSION['login'])){
                 
                     <div class="about-content">
                         <h1>About Us</h1>
+                        <hr>
                         <h2>Our Location</h2>
 
                         <p>The Moffat Bay Lodge and Marina is a luxurious, 118 acre private retreat nestled on the southern shore of Joviedsa Island. The lodge overlooks the pristine beauty of the Moffat Bay which is the starting point for many vessels traveling across the seas.</p>
@@ -164,10 +161,14 @@ if(isset($_SESSION['login'])){
 
             <section class="section mt-5 text-center" id="attractions">
 
-
+            
 
             </section>
+
+
             <section class="section mt-5 text-center" id="registrationContainer">
+
+            <h1>Book Your Vacation Today!!!</h1>
 
                 <div class="registrationChild" id="thanks">
 

@@ -1,5 +1,9 @@
 <?php
 
+/* 
+Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
+*/
+
 $dotenv = fopen('.env', 'r');
 
 while(!feof($dotenv)){

@@ -1,5 +1,9 @@
 <?php
     
+    /* 
+        Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
+    */
+
     if(isset($_POST['btn-send']))
     {
         $firstName = $_POST['firstName'];
