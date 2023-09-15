@@ -50,7 +50,7 @@
 
 /*---------- Navbar Items ----------*/
 .topbar{
-
+    z-index: 1000;
     overflow: hidden;
     position: fixed;
 
@@ -139,18 +139,16 @@
     background-position: center center;
 }
 
-#landingPage, #attractions, #contactUs, #registrationContainer{
+#landingPage, #attractions, #contactUs{
 
     height: 100vh;
     background-size: cover;
-    
 
 }
 
 #landingPageText{
 
     color: white;
-
 }
 
 .about-us-wrap{
@@ -193,6 +191,12 @@
 }
 
 #form {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+                url('images/thumbnail_SalishSalmon2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
     align-items: center;
     min-height: 500px;
     width: 50%;
@@ -219,6 +223,10 @@ form {
     padding: 10px;
 }
 
-#space {
-    min-height: 25px;
+/*--------- currentReservations ----------*/
+#currentReservations > table, td, tr, th {
+    border: 5px solid;
+    padding: 10px;
+    margin: auto;
 }
+

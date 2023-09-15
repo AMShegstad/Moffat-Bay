@@ -93,7 +93,7 @@
                     </div>
                     <div>
                         <span><ion-icon name="call"></ion-icon></span>
-                        <a href="tel:13083083343">1 (308) 308-3343</a>
+                        <a href="tel:13085553343">1 (308) 555-3343</a>
                     </div>
                     <!-- Social Media Links -->
                     <ul class="sci">

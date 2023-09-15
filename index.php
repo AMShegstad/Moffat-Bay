@@ -1,6 +1,8 @@
 <?php
+    
+    //Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
 
-session_start();
+    session_start();
 
 if(isset($_SESSION['login'])){
 
@@ -48,37 +50,49 @@ if(isset($_SESSION['login'])){
 
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
         
-                <a class="navbar-brand mx-3" href="#landingPage">
+                    <a class="navbar-brand mx-3" href="#landingPage">
+                        
+                        <img id="mbLogo" src="images/logo.png" width="160" height="70" class="d-inline-block align-top" alt="Moffat Bay Lodge">
                     
-                    <img id="mbLogo" src="images/logo.png" width="160" height="70" class="d-inline-block align-top" alt="Moffat Bay Lodge">
-                
-                </a>
-
-                    <ul class="navbar-nav mx-auto">
-
-                        <li class="nav-item text-center">
-                            <a class="nav-link" href="#aboutUs">About Us</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#attractions">Attractions</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#registrationContainer">Reservation</a>
-                        </li>
-
-                    </ul>
-
-                    <a href="javascript:void(0);"class="icon" onclick="openNavbar()">
-                                <i class="fa fa-bars"></i>
                     </a>
 
-                    <ul class="nav navbar-nav navbar-right mx-3">
+                        <ul class="navbar-nav mx-auto">
 
-                        <a class="nav-link" onclick="showLogin()"><span class="fas fa-sign-in-alt"></span><?php echo $text; ?></a>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="#aboutUs">About Us</a>
+                            </li>
 
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#attractions">Attractions</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#registrationContainer">Reservation</a>
+                            </li>
+                        
+                            <?php 
+                                if (ISSET($_SESSION['login'])) { ?>
+                                    <li class='nav-item text-center'>
+                                    <a class='nav-link' href='reservationLookup.php'>Look up your reservation</a>
+                                    </li>
+                                    <?php
+                                } else {
+                                    echo "";
+                                }
+                            ?>
+                        
+
+                        </ul>
+
+                        <a href="javascript:void(0);"class="icon" onclick="openNavbar()">
+                                    <i class="fa fa-bars"></i>
+                        </a>
+
+                        <ul class="nav navbar-nav navbar-right mx-3">
+
+                            <a class="nav-link" onclick="showLogin()"><span class="fas fa-sign-in-alt"></span><?php echo $text; ?></a>
+
+                        </ul>
             
             </nav>
 
@@ -122,7 +136,7 @@ if(isset($_SESSION['login'])){
         <br>
         <br>
 
-        <div class="container">
+        <div class="mx-5">
 
             <section class="section mt-5 text-right" id="landingPage">
 
@@ -131,6 +145,9 @@ if(isset($_SESSION['login'])){
                     <h1 class="ms-auto">Making Memories</h1>
                     <h2 class="ms-auto">That will last a lifetime!</h2>
 
+                    <div id="currentReservations">
+                        <?php include('currentRes.php') ?>
+                    </div>
                 </div>
 
             </section>
@@ -154,6 +171,8 @@ if(isset($_SESSION['login'])){
                         <h2>Our History</h2>
                         <p>First Nations Development Committee was founded in 2020 by four friends Alexander Shegsted, Bryan Motten, Andrew McCloud, and Timmy Bell. After extreme consideration on locations the friends decided on Moffat Bay. Plans were presented and approved by the Joviedsa Island Council in 2022. Construction began in February 2023 and is nearing completion for this coming season.</p>
                         
+                        <hr>
+                        <h3>Click <a href="contact.php">HERE</a> to contact our the Moffat Bay Lodge team</h3>
                     </div>
                 </div>    
 
@@ -200,10 +219,8 @@ if(isset($_SESSION['login'])){
 
             </section>
 
-            <section id="space">
-                <a href="sessionTest.php">Testing the session variables</a>
-            </section>
 
+                <a href="sessionTest.php">Testing the session variables</a>
         </div>
 
     </body>

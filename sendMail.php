@@ -11,7 +11,7 @@
         $email = $_POST['email'];
         $mobile = $_POST['mobile'];
         $message = $_POST['message'];
-        $headers = 'From: got1ssei@gmail.com' . "/r/n";
+        $headers = 'From: AlexShegstad@gmail.com' . "/r/n";
 
         if(empty($firstName) || empty($lastName) || empty($email) || empty($mobile) || empty($message))
         {
@@ -19,7 +19,7 @@
         }
         else
         {
-            $to = "got1ssei@gmail.com";
+            $to = "AlexShegstad@gmail.com";
 
             if(mail($to,$firstName,$lastName,$message,$headers))
             {
