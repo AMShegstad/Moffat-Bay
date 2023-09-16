@@ -56,3 +56,19 @@ function closeCreateAccountForm(){
     document.getElementById("createAccountForm").style.display = "none";
 
 }
+
+function openNavbar(){
+
+    var x =document.getElementById("navbar-items");
+
+    if(x.className === "topbar"){
+
+        x.className += " responsive";
+
+    }else{
+
+        x.className = "topbar";
+
+    }
+
+}

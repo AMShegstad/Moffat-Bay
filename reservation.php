@@ -32,13 +32,15 @@ if(isset($_POST)){
 
     $customerID = $_SESSION['customerID'];
 
+    $customerEmail = $_SESSION['emailAddress'];
+
     // sql query to be executed
-	$sql = "INSERT INTO reservation (customerID, roomConfig, checkInDate, checkOutDate ) VALUES(?,?,?,?)";
+	$sql = "INSERT INTO reservation (customerID, roomConfig, checkInDate, checkOutDate, email ) VALUES(?,?,?,?, ?)";
 
 	$stmtinsert = $db->prepare($sql);
 
     // getting the results
-	$result = $stmtinsert->execute([$customerID, $roomConfig, $checkInDate, $checkOutDate]);
+	$result = $stmtinsert->execute([$customerID, $roomConfig, $checkInDate, $checkOutDate, $customerEmail]);
 
     // confirming the entries
 	if($result){

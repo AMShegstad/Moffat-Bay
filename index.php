@@ -113,25 +113,7 @@ if(isset($_SESSION['login'])){
 
         </div>
 
-        <script>
-
-            function openNavbar(){
-
-                var x =document.getElementById("navbar-items");
-
-                if(x.className === "topbar"){
-
-                    x.className += " responsive";
-
-                }else{
-
-                    x.className = "topbar";
-
-                }
-
-            }
-
-        </script>
+        
 
         <br>
         <br>

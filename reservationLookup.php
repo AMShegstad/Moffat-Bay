@@ -4,6 +4,8 @@
 
     session_start();
 
+    include_once 'config.php';
+
 if(isset($_SESSION['login'])){
 
     $text = "Welcome " . $_SESSION['login'];
@@ -11,6 +13,16 @@ if(isset($_SESSION['login'])){
 }else{
 
     $text = "Login/Sign-Up";
+
+}
+
+function runQuery($statement){
+
+    global $db;
+
+    $results = $db->query($statement);
+
+    return $results;
 
 }
 
@@ -93,28 +105,161 @@ if(isset($_SESSION['login'])){
 
         </div>
 
-        <script>
+        <div class="container">
 
-            function openNavbar(){
+            <form class="text-center" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
 
-                var x =document.getElementById("navbar-items");
+                <div class="form-outline w-50 mx-auto" style="border: 1px solid black">
 
-                if(x.className === "topbar"){
+                    <h2>Search Reservation:</h2>
 
-                    x.className += " responsive";
+                    <select name="searchOptions" class="mb-3 mt-3">
+
+                        <option disabled selected> -- Search Options --</option>
+
+                        <option value="sAll">All</option>
+
+                        <option value="sEmail">Email</option>
+
+                        <option value="sRoomConfig">Room Config</option>
+
+                        <option value="sCheckInDate">Check-In Date (YYYY-MM-DD)</option>
+
+                        <option value="sCheckOutDate">Check Out Date (YYYY-MM-DD)</option>
+
+                    </select>
+
+                    <input type="text" name="searchTxt" class="form-control w-50 mx-auto mb-3 text-center" placeholder="Criteria.." style="border: 2px solid black">
+
+                    <button type="submit" name="submitSearch" class="btn btn-primary mb-3">Search</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <br>
+        <br>
+
+        <div class="my-5">
+
+            <table class="table table-bordered table-striped">
+
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Room Config</th>
+                    <th>Check-In Date</th>
+                    <th>Check-Out Date</th>
+                </tr>
+            
+
+        <?php
+
+            if(isset($_SESSION['login'])){
+
+                $customerSessionID = $_SESSION['customerID'];
+
+                if(isset($_POST['submitSearch'])){
+
+                    $searchChoice = $_POST['searchOptions'];
+                    
+
+                    if($searchChoice == "sAll"){
+
+                        $sqlStmt = "SELECT * FROM customers INNER JOIN reservation ON customers.customerID = reservation.customerID AND reservation.customerID = {$customerSessionID};";
+
+                    }else if($_POST['searchTxt']){
+
+                        $criteria = $_POST['searchTxt'];
+                    
+                        if($searchChoice == 'sEmail'){
+
+                                $sqlStmt = "SELECT * FROM customers INNER JOIN reservation ON customers.customerID = reservation.customerID AND reservation.email = '{$criteria}';";
+
+
+                        }else if($searchChoice == 'sRoomConfig'){
+
+                                $sqlStmt = "SELECT * FROM customers INNER JOIN reservation ON customers.customerID = reservation.customerID AND reservation.roomConfig = '{$criteria}';";
+
+                        }else if($searchChoice == 'sCheckInDate'){
+
+                            $sqlStmt = "SELECT * FROM customers INNER JOIN reservation ON customers.customerID = reservation.customerID AND reservation.checkInDate = '{$criteria}';";
+
+
+                        }else if($searchChoice == 'sCheckOutDate'){
+
+                            $sqlStmt = "SELECT * FROM customers INNER JOIN reservation ON customers.customerID = reservation.customerID AND reservation.checkOutDate = '{$criteria}';";
+
+                        }
+
+                    }
+
+                    $results = runQuery($sqlStmt);
+
+                    $results->setFetchMode(PDO::FETCH_ASSOC);
+
+                    while($row = $results->fetch()){
+
+                        $fullName = "{$row['firstName']} {$row['lastName']}";
+
+                        ?>
+
+                            <tr>
+
+                                <td><?php echo $fullName ?></td>
+                                <td><?php echo $row['email'] ?></td>
+                                <td><?php echo $row['roomConfig'] ?></td>
+                                <td><?php echo $row['checkInDate'] ?></td>
+                                <td><?php echo $row['checkOutDate'] ?></td>
+
+                            </tr>
+
+                        <?php
+
+                    }
 
                 }else{
 
-                    x.className = "topbar";
+                    $sqlStmt = "SELECT * FROM customers INNER JOIN reservation ON customers.customerID = reservation.customerID AND reservation.customerID = {$customerSessionID};";
 
-                }
+                    //$queryResults = runQuery($sqlStmt, $db);
+
+                    $results = runQuery($sqlStmt);
+
+                    $results->setFetchMode(PDO::FETCH_ASSOC);
+
+                    while($row = $results->fetch()){
+
+                        $fullName = "{$row['firstName']} {$row['lastName']}";
+
+                        ?>
+
+                            <tr>
+
+                                <td><?php echo $fullName ?></td>
+                                <td><?php echo $row['email'] ?></td>
+                                <td><?php echo $row['roomConfig'] ?></td>
+                                <td><?php echo $row['checkInDate'] ?></td>
+                                <td><?php echo $row['checkOutDate'] ?></td>
+
+                            </tr>
+
+                        <?php
+
+                    }
+
+                }      
 
             }
 
-        </script>
+        ?>
 
-        <br>
-        <br>
+            </table>
+
+        </div>
 
         <image src="images/thumbnail_SalishSalmon2.png"></image>
+
     </html>

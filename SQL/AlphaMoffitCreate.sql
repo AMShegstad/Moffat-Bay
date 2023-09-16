@@ -19,6 +19,7 @@ guestNumberID INT,
 roomConfigID INT,
 checkInDate DATE NOT NULL,
 checkOutDate DATE NOT NULL,
+email VARCHAR(70),
 PRIMARY KEY(reservationID),
 FOREIGN KEY(customerID) REFERENCES customers(customerID)
 );
