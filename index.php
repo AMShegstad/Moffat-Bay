@@ -118,7 +118,7 @@ if(isset($_SESSION['login'])){
         <br>
         <br>
 
-        <div class="mx-5">
+        <div class="px-5 body">
 
             <section class="section mt-5 text-right" id="landingPage">
 
@@ -141,9 +141,11 @@ if(isset($_SESSION['login'])){
                 
                     <div class="about-content">
                         <h1>About Us</h1>
+                        <br>
                         <hr>
+                        <br>
                         <h2>Our Location</h2>
-
+                        <br>
                         <p>The Moffat Bay Lodge and Marina is a luxurious, 118 acre private retreat nestled on the southern shore of Joviedsa Island. The lodge overlooks the pristine beauty of the Moffat Bay which is the starting point for many vessels traveling across the seas.</p>
 
                         <p>The main Lodge features spacious updated rooms, as well as an indoor pool, and lounge ran by ICE certified mixologist Dwayne Denair. Laundry service is availible on weekdays. Updated rooms include kitchenettes, private bathrooms, electric fireplaces, air conditioning, hard wood floors throughout, vaulted ceilings with extravagant woodwork from local sculptors, private porch  area, 65" flat screen televisions, and fiber internet connection.</p>
@@ -151,9 +153,12 @@ if(isset($_SESSION['login'])){
                         <p>The surrounding area provides guests with the opportunity to see deer, wild turkey, beaver, ducks, red tail hawks, red tail fox, Canadian geese, American Bald Eagle, and the black-footed ferret all in thier natural habitat. All we ask is that your interactions with the native wildlife be limited to your camera shutters.</p>
 
                         <h2>Our History</h2>
+                        <br>
                         <p>First Nations Development Committee was founded in 2020 by four friends Alexander Shegsted, Bryan Motten, Andrew McCloud, and Timmy Bell. After extreme consideration on locations the friends decided on Moffat Bay. Plans were presented and approved by the Joviedsa Island Council in 2022. Construction began in February 2023 and is nearing completion for this coming season.</p>
                         
                         <hr>
+                        <br>
+                        <br>
                         <h3>Click <a href="contact.php">HERE</a> to contact our the Moffat Bay Lodge team</h3>
                     </div>
                 </div>    
@@ -162,8 +167,51 @@ if(isset($_SESSION['login'])){
 
             <section class="section mt-5 text-center" id="attractions">
 
-            
+            <div id="attractionsSection">
 
+            <h3 id="attractionText">WE SUGGEST THE FOLLOWING LOCAL ATTRACTIONS:</h3>
+
+                <div class="panelContainer">
+                    <div class="panel active" onclick="setPanel1Links()" onload="setPanel1Links()" style="background-position: center; background-image: url(attractionImages/horseArmy.jpg);">
+                        <h3 id="panel1text" style="color: white"> Learn New Activities... </h3>
+                    </div>
+
+                    <div class="panel" onclick="setPanel2Links()" style="background-position: center bottom; background-image: url(attractionImages/AlaskaNorthernLights.jpg);">
+                        <h3 id="panel2text"> Or Simply Go Exploring... </h3>
+                    </div>
+
+                    <div class="panel" onclick="setPanel3Links()" style="background-position: center bottom; background-image: url(attractionImages/cheers.jpg);">
+                        <h3 id="panel3text"> Enjoy Local Dining, Fine or Otherwise... </h3>
+                    </div>
+
+                    <div class="panel" onclick="setPanel4Links()" style="background-position: center; background-image: url(attractionImages/alaskaNightLife.jpg);">
+                        <h3 id="panel4text"> Take Part In Our Vibrant Night Life! </h3>
+                    </div>
+
+                </div>
+
+                <div  id="linkContainer">
+
+                    <div class="linkItem">
+                        <img id="link1Image" class="linkImage" src="attractionImages/curling.jpg"><br>
+                        <a id="link1" class="attractionLinks" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1"> Awesome Curling Experience! </a><br>
+                    </div>
+
+                    <div class="linkItem">
+                        <img id="link2Image" class="linkImage" src="attractionImages/horseTours.jpg"><br>
+                        <a id="link2" class="attractionLinks" href="https://www.equitours.com/#"> Horseback Riding Tours </a><br>
+                    </div>
+
+                    <div class="linkItem">
+                        <img id="link3Image" class="linkImage" src="attractionImages/scubaSteve.jpeg"><br>
+                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/"> Scuba Diving at Ressurection Bay </a><br>
+                    </div>
+
+            </div>
+
+            <!--</div>-->
+
+            <script src="attractions.js"></script>
             </section>
 
 
