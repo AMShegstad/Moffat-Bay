@@ -2,6 +2,8 @@
     Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
 */
 
+
+
 /*---------- Login Form ----------*/
 .login-form-popup, .logoutForm-popup{
 
@@ -110,18 +112,27 @@
 #landingPage{
 
     background-image: url("images/image1.jpg");
+    border-radius: 25px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #attractions{
-
-    background-image: url("images/image3.jpg");
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    /*overflow: scroll;*/
+    
+    /*background-image: url("images/image3.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
+
 
 #contactUs{
 
@@ -154,6 +165,11 @@
 .about-us-wrap{
     overflow: hidden;
     position: relative;
+    width: 60vw;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .about-us-bg{
@@ -165,7 +181,12 @@
     height: auto;
 }
 .about-content {
-    position: relative
+    position: relative;
+    height: 80vh;
+}
+
+.about-content > p {
+    font-size: 16pt;
 }
 
 .form-row {
@@ -183,9 +204,10 @@
 /*---------- Reservation Summary page----------*/
 #thanks {
     background-image: url("images/image5.jpg");
+    border-radius: 25px;
     background-size: cover;
-    min-height: 500px;
-    width: 50%;
+    min-height: 600px;
+    width: 70%;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -199,7 +221,7 @@
     background-position: center center;
     align-items: center;
     min-height: 500px;
-    width: 50%;
+    width: 30%;
 }
 
 form {
@@ -215,6 +237,7 @@ form {
 #registrationContainer {
     border: 3px solid #fff;
     padding: 10px;
+    height: 80vh;
 }
 
 .registrationChild {
@@ -230,3 +253,108 @@ form {
     margin: auto;
 }
 
+/*----------AttractionsPage---------------*/
+
+#attractions > * {
+    box-sizing: border-box;
+}
+
+/*
+body {
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    overflow: scroll;
+}
+*/
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panelContainer {
+    display: flex;
+    width: 95vw;
+    position: relative;
+}
+
+.panel {
+    background-size: cover;
+    background-color: fixed;
+    background-repeat: no-repeat;
+    height: 40vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 5px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: 0.3s ease-in 0.3s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+#linkContainer {
+    justify-content: center;
+    height: 50vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: auto;
+}
+
+#attractionsSection {
+    padding-top: 100px;
+    height: 95vh;
+    position: relative;
+    /*display: block;*/
+}
+
+.attractionLinks {
+    height: 30vh;
+    width: 30%;
+}
+
+.linkImage {
+    height: 350px;
+    width: 90%;
+    border-radius: 15px;
+    animation-name: linkChange;
+    transition: 2s;
+}
+
+.linkItem > a {
+    font-size: 18pt;
+    align-content: center;
+    justify-content: center;
+}
+
+#attractionText {
+    font-size: 24px;
+    text-align: center;
+}
