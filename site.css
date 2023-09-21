@@ -24,7 +24,7 @@
 
 }
 
-#loginForm, #createAccountForm{
+#createAccountForm{
 
     max-width: 300px;
     padding: 10px;
@@ -45,6 +45,68 @@
 }
 
 #subBtn{
+
+    color: white;
+
+}
+
+.myform{
+
+    max-width: 100%;
+    box-shadow: 0px 4px 6px 0px rgba(22, 22, 26, 0.18);
+    padding: 2em;
+    color: white;
+    @media(max-width: 576px){
+
+        max-width: 90%;
+        margin: 0px auto;
+
+    }
+
+}
+
+.modal-body{
+
+    padding: 0px;
+
+}
+
+.btn-close{
+
+    position: absolute;
+    right: 0;
+    padding: 1em;
+
+}
+
+.modal-content{
+
+    width: 80%;
+    margin: 0px auto;
+
+}
+
+.modal-body{
+
+    padding: 0px;
+
+}
+
+h1{
+
+    font-size: 2.3em;
+    font-weight: bold;
+
+}
+
+.form-control{
+
+    background-color: inherit;
+    color: white;
+
+}
+
+#loginInput{
 
     color: white;
 

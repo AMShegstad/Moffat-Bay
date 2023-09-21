@@ -90,30 +90,39 @@ if(isset($_SESSION['login'])){
 
                         <ul class="nav navbar-nav navbar-right mx-3">
 
-                            <a class="nav-link" onclick="showLogin()"><span class="fas fa-sign-in-alt"></span><?php echo $text; ?></a>
+                            <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#loginForm"><span class="fas fa-sign-in-alt"></span><?php echo $text; ?></a>
 
                         </ul>
+
+                        <?php
+                        
+                        if(isset($_SESSION['login'])){
+
+                            ?>
+
+                            <ul class="nav navbar-nav navbar-right mx-3">
+
+                                <a class="nav-link" href="logout.php" type="button">Logout</a>
+
+                            </ul>
+
+                            <?php
+
+                        }
+                        
+                        ?>
             
             </nav>
-
-            
 
             <script src="actions.js"></script>
 
         </div>
 
-        <div class="my-5" id="login">
-
             <?php
 
                 include 'loginPage.php';
-                include 'createAccountForm.php';
 
             ?>
-
-        </div>
-
-        
 
         <br>
         <br>

@@ -1,152 +1,223 @@
+<!DOCTYPE html>
 
-<!--
-   
-  Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
+<html lang='en'>
 
- -->
+    <head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <meta charset='UTF-8'>
 
-<!-- The form -->
-<div class="create-account-form-popup" id="createAccountForm">
-  <form id="createAccountForm" action="/moffat-bay/process.php" method="post">
-    <h1>Create Account</h1>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <div class="form-outline mb-2">
+        <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' crossorigin='anonymous'>
 
-      <label class="form-label" id="loginTxt" for="emailTxt"><b>Email</b></label>
-      <input type="text" class="form-control" placeholder="Email.." name="emailTxt" required>
+        <script src="https://kit.fontawesome.com/8d0c065460.js" crossorigin="anonymous"></script>
 
-    </div>
+        <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js' integrity='sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r' crossorigin='anonymous'></script>
 
-    <div class="form-outline mb-2">
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js' integrity='sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS' crossorigin='anonymous'></script>
 
-      <label class="form-label" id="loginTxt" for="first-name"><b>First Name</b></label>
-      <input type="text" class="form-control" placeholder="First Name.." name="firstName" required>
+        <title>Sign Up</title>
 
-    </div>
+    </head>
 
-    <div class="form-outline mb-2">
+    <body class="bg-dark">
 
-      <label class="form-label" id="loginTxt" for="last-name"><b>Last Name</b></label>
-      <input type="text" class="form-control" placeholder="Last Name.." name="lastName" required>
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz' crossorigin='anonymous'></script>
 
-    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <div class="form-outline mb-2">
+        <div class="container h-100">
 
-      <label class="form-label" id="loginTxt" for="phoneNumber"><b>Phone Number</b></label>
-      <input type="text" class="form-control" placeholder="Phone number..." name="phoneNumber" required>
+            <div class="row d-flex justify-content-center h-100 mt-5">
 
-</div>
+              <div class="col-lg-12 col-xl-11">
 
-
-    <div class="form-outline mb-2">
-
-      <label id="loginTxt" for="password"><b>Password</b></label>
-      <input type="password" class="form-control" id="regularPass" placeholder="Password.." name="passwordTxt" required>
-
-      <span>Password must have:</span>
-      <br>
-      <span id="pwd-length-Req">Atleast 8 Characters</span>
-      <br>
-      <span id="pwd-lower-Req">Atleast 1 Lower Case</span>
-      <br>
-      <span id="pwd-upper-Req">Atleast 1 Upper Case</span>
-
-      <br>
-
-      <label id="loginTxt" for="passwordCheck"><b>Type password again</b></label>
-      <input type="password" class="form-control" id="confirmPass" placeholder="Password Again.." name="passwordCheck" required>
-
-      <span id="passwordError"></span>
-
-      <script>
-
-        function checkPasswordLength() {
-
-          var pWordLength = /^.{8,16}$/;
-          var pWordUpper = /[A-Z]+/;
-          var pWordLower = /[a-z]+/;
-
-          var password = $("#regularPass").val();
-
-          if (pWordLength.test(password)) {
+                <div class="card text-white bg-dark mb-4" style="border-radius: 25px; border: 3px solid crimson">
               
-            $('#pwd-length-Req').css('color','green');
+                  <div class="card-body p-md-5">
 
-          } else {
-              $('#pwd-length-Req').css('color','red');
+                    <div class="row justify-content-center">
 
-          }
+                        <div class="col d-flex align-items-center justify-content-center bg-light rounded-circle mx-5 my-5" id="fishLogo">
 
-          if(pWordLower.test(password)){
+                          <div class="row text-center">
 
-            $('#pwd-lower-Req').css('color','green');
+                            <img src="images/red_fish.png">
 
-            }else{
+                          </div>
 
-            $('#pwd-lower-Req').css('color','red');
+                        </div>
 
-          }
+                        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-          if(pWordUpper.test(password)){
+                          <h1 class="text-center fw-bold mb-5 mx-1 mx-md-4 mt-4">Create An Account</h1>
 
-            $('#pwd-upper-Req').css('color','green');
+                          <form class="mx-1 mx-md-4" action="/moffat-bay/process.php" method="post">
 
-            }else{
+                            <div class="bg-dark">
 
-            $('#pwd-upper-Req').css('color','red');
+                              <div class="d-flex flex-row align-items-center mb-4">
 
-          }
-        }
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
 
-        function checkPasswordMatch(){
+                                <div class="form-outline flex-fill mb-0">
 
-          var password = $("#regularPass").val();
+                                  <input type="email" id="createAccountTextBox" name="emailTxt" class="form-control" placeholder="Email">
 
-          var confirmPassword = $("#confirmPass").val();
+                                </div>
 
-          if(password != confirmPassword){
+                                </div>
 
-            $('#passwordError').html("Passwords do not match!");
-            $('#subBtn').attr("disabled", true);
+                                <div class="d-flex flex-row align-items-center mb-4 bg-dark">
 
-          }else{
+                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
 
-            $('#passwordError').html("");
-            $('#subBtn').attr("disabled", false);
+                                <div class="form-outline flex-fill mb-0">
 
-          }
+                                  <input type="text" id="createAccountTextBox" name="firstName" class="form-control mb-4" placeholder="First Name">
 
-        }
+                                  <input type="text" id="createAccountTextBox" name="lastName" class="form-control" placeholder="Last Name">
 
-        $(document).ready(function(){
+                                </div>
 
-          $("#confirmPass").keyup(checkPasswordMatch);
+                                </div>
 
-          $("#regularPass").keyup(checkPasswordLength);
+                                <div class="d-flex flex-row align-items-center mb-4">
 
-        });
+                                  <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
 
-      </script>
+                                  <div class="form-outline flex-fill mb-0">
 
-    </div>
-    
+                                    <input type="text" id="createAccountTextBox" name="phoneNumber" class="form-control" placeholder="Phone">
 
-    <div class="text-center">
+                                  </div>
 
-      <button class="btn btn-primary btn-block mb-4" id="subBtn" type="submit" class="btn" disabled>Create Account</button>
+                                </div>
 
-      <button class="btn btn-danger btn-block mb-4" id="loginTxt" type="button" class="btn cancel" onclick="closeCreateAccountForm()">Cancel</button>
+                                <div class="d-flex flex-row align-items-center mb-4">
 
-    </div>
+                                  <i class="fas fa-key fa-lg me-3 fa-fw"></i>
 
-    <div class="text-center">
+                                  <div class="form-outline flex-fill mb-0">
 
-      <p>Actually have an account?<br> <a href="#!">Sign-In Here</a></p>
+                                    <input type="password" id="regularPass" name="passwordTxt" class="form-control mb-4" placeholder="Password">
 
-    </div>
+                                    <span>Password must have:</span>
+                                    <br>
+                                    <span id="pwd-length-Req">Atleast 8 Characters</span>
+                                    <br>
+                                    <span id="pwd-lower-Req">Atleast 1 Lower Case</span>
+                                    <br>
+                                    <span id="pwd-upper-Req">Atleast 1 Upper Case</span>
 
-  </form>
-</div>
+                                    <input type="password" id="confirmPass" name="passwordCheck" class="form-control mb-4 mt-4" placeholder="Confirm Password">
+
+                                    <span id="passwordError"></span>
+
+                                    <script>
+
+                                      function checkPasswordLength() {
+
+                                        var pWordLength = /^.{8,16}$/;
+                                        var pWordUpper = /[A-Z]+/;
+                                        var pWordLower = /[a-z]+/;
+
+                                        var password = $("#regularPass").val();
+
+                                        if (pWordLength.test(password)) {
+                                            
+                                          $('#pwd-length-Req').css('color','green');
+
+                                        } else {
+                                            $('#pwd-length-Req').css('color','red');
+
+                                        }
+
+                                        if(pWordLower.test(password)){
+
+                                          $('#pwd-lower-Req').css('color','green');
+
+                                          }else{
+
+                                          $('#pwd-lower-Req').css('color','red');
+
+                                        }
+
+                                        if(pWordUpper.test(password)){
+
+                                          $('#pwd-upper-Req').css('color','green');
+
+                                          }else{
+
+                                          $('#pwd-upper-Req').css('color','red');
+
+                                        }
+                                      }
+
+                                      function checkPasswordMatch(){
+
+                                        var password = $("#regularPass").val();
+
+                                        var confirmPassword = $("#confirmPass").val();
+
+                                        if(password != confirmPassword){
+
+                                          $('#passwordError').html("Passwords do not match!");
+                                          $('#subBtn').attr("disabled", true);
+
+                                        }else{
+
+                                          $('#passwordError').html("");
+                                          $('#subBtn').attr("disabled", false);
+
+                                        }
+
+                                      }
+
+                                      $(document).ready(function(){
+
+                                        $("#confirmPass").keyup(checkPasswordMatch);
+
+                                        $("#regularPass").keyup(checkPasswordLength);
+
+                                      });
+
+                                    </script>
+
+                                  </div>
+
+                                </div>
+
+                                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+
+                                  <button type="submit" id="subBtn" class="btn btn-primary btn-lg">Submit</button>
+
+                                </div>
+
+                                  <div class="form-outline flex-fill mb-0 text-center">
+
+                                      <a href="index.php" style="text-decoration: none; color: white; font-size: 24px">Return Home</a>
+
+                                  </div>
+
+                            </div>
+
+                          </form>
+
+                        </div>
+
+                    </div>
+
+                  </div>
+              
+                </div>
+
+              </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
