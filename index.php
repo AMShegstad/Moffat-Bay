@@ -163,7 +163,7 @@ if(isset($_SESSION['login'])){
 
                         <h2>Our History</h2>
                         <br>
-                        <p>First Nations Development Committee was founded in 2020 by four friends Alexander Shegsted, Bryan Motten, Andrew McCloud, and Timmy Bell. After extreme consideration on locations the friends decided on Moffat Bay. Plans were presented and approved by the Joviedsa Island Council in 2022. Construction began in February 2023 and is nearing completion for this coming season.</p>
+                        <p>First Nations Development Committee was founded in 2020 by four friends Alexander Shegstad, Bryan Moten, Andrew McCloud, and Timmy Bell. After extreme consideration on locations the friends decided on Moffat Bay. Plans were presented and approved by the Joviedsa Island Council in 2022. Construction began in February 2023 and is nearing completion for this coming season.</p>
                         
                         <hr>
                         <br>
