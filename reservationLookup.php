@@ -60,50 +60,67 @@ function runQuery($statement){
 
         <div class="topbar" id="navbar-items">
 
-            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
+
+        <a class="navbar-brand mx-3" href="#landingPage">
+            
+            <img id="mbLogo" src="images/logo.png" width="160" height="70" class="d-inline-block align-top" alt="Moffat Bay Lodge">
         
-                <a class="navbar-brand mx-3" href="#landingPage">
-                    
-                    <img id="mbLogo" src="images/logo.png" width="160" height="70" class="d-inline-block align-top" alt="Moffat Bay Lodge">
-                
-                </a>
+        </a>
 
-                    <ul class="navbar-nav mx-auto">
+            <ul class="navbar-nav mx-auto">
 
-                        <li class="nav-item text-center">
-                            <a class="nav-link" href="index.php">Back to home page</a>
-                        </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="index.php">Return To Home</a>
+                </li>            
 
-                    </ul>
+            </ul>
 
-                    <a href="javascript:void(0);"class="icon" onclick="openNavbar()">
-                                <i class="fa fa-bars"></i>
-                    </a>
+            <a href="javascript:void(0);"class="icon" onclick="openNavbar()">
+                        <i class="fa fa-bars"></i>
+            </a>
 
-                    <ul class="nav navbar-nav navbar-right mx-3">
+            <ul class="nav navbar-nav navbar-right mx-3">
 
-                        <a class="nav-link" onclick="showLogin()"><span class="fas fa-sign-in-alt"></span><?php echo $text; ?></a>
+                <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#loginForm"><span class="fas fa-sign-in-alt"></span><?php echo $text; ?></a>
 
-                    </ul>
+            </ul>
+
+            <?php
             
+            if(isset($_SESSION['login'])){
+
+                ?>
+
+                <ul class="nav navbar-nav navbar-right mx-3">
+
+                    <a class="nav-link" href="logout.php" type="button">Logout</a>
+
+                </ul>
+
+                <?php
+
+            }else{
+
+                include 'loginPage.php';
+
+            }
+            
+            ?>
+
             </nav>
-
-            
 
             <script src="actions.js"></script>
 
-        </div>
-
-        <div class="my-5" id="login">
+            </div>
 
             <?php
 
-                include 'loginPage.php';
-                include 'createAccountForm.php';
 
             ?>
 
-        </div>
+            <br>
+            <br>
 
         <div class="container">
 
