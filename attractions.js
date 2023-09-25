@@ -1,3 +1,5 @@
+// Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
+
 const panels = document.querySelectorAll('.panel');
 
 function removeActiveClasses() {

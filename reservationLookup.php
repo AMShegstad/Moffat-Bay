@@ -1,7 +1,8 @@
+
+<!-- Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten -->
+
 <?php
     
-    //Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
-
     session_start();
 
     include_once 'config.php';

@@ -1,3 +1,6 @@
+
+<!-- Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten -->
+
 <?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
