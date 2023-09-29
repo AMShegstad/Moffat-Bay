@@ -171,13 +171,18 @@ h1{
 }
 
 /*---------- Body Sections ---------- */
+
 #landingPage{
 
     background-image: url("images/image1.jpg");
+    background-size: cover;
+    height: 100vh;
+    /*
     border-radius: 25px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    */
 }
 
 #attractions{
@@ -212,7 +217,7 @@ h1{
     background-position: center center;
 }
 
-#landingPage, #attractions, #contactUs{
+ #attractions, #contactUs{
 
     height: 100vh;
     background-size: cover;

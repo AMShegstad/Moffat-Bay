@@ -127,18 +127,40 @@ if(isset($_SESSION['login'])){
         <br>
         <br>
 
-        <div class="px-5 body">
+        <div class="px-5">
 
-            <section class="section mt-5 text-right" id="landingPage">
+            <section class="section mt-5 bg-image img-fluid text-right" >
 
-                <div class="d-flex flex-column justify-content-center" id="landingPageText">
+                <div class="d-flex bg-image justify-content-center" id="landingPage">
 
-                    <h1 class="ms-auto">Making Memories</h1>
-                    <h2 class="ms-auto">That will last a lifetime!</h2>
+                    <div class="" id="landingPageText" style="height: 100vh">
 
-                    <div id="currentReservations">
-                        <?php include('currentRes.php') ?>
+                        <div class="col mt-5">
+
+                            <div class="row" style="">
+
+                                <div class="opacity-75 rounded-pill text-center" style="background: rgba(255,255,255,0.75);">
+                            
+                                    <div class="mx-5 my-5">
+
+                                        <p class="opacity-100" style="font-size: 120px;color: black;"><b>Making Memories</b></p>
+
+
+                                        <p class="opacity-100" style="font-size: 105px; color: black;">That will last a lifetime!</p>
+
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="currentReservations">
+                            <?php include('currentRes.php') ?>
+                        </div>
                     </div>
+
                 </div>
 
             </section>

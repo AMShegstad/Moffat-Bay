@@ -11,6 +11,8 @@
 
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
+        <link rel="stylesheet" href="createAccountStyles.css">
+
         <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' crossorigin='anonymous'>
 
         <script src="https://kit.fontawesome.com/8d0c065460.js" crossorigin="anonymous"></script>
@@ -35,17 +37,17 @@
 
               <div class="col-lg-12 col-xl-11">
 
-                <div class="card text-white bg-dark mb-4" style="border-radius: 25px; border: 3px solid crimson">
+                <div class="card text-white mb-4" style="border-radius: 25px; border: 3px solid white" id="createAccountForm">
               
                   <div class="card-body p-md-5">
 
                     <div class="row justify-content-center">
 
-                        <div class="col d-flex align-items-center justify-content-center bg-light rounded-circle mx-5 my-5" id="fishLogo">
+                        <div class="col d-flex align-items-center justify-content-center" id="fishLogo">
 
                           <div class="row text-center">
 
-                            <img src="images/red_fish.png">
+                            <img class="img-fluid" src="images/red_fish.png">
 
                           </div>
 
@@ -55,9 +57,9 @@
 
                           <h1 class="text-center fw-bold mb-5 mx-1 mx-md-4 mt-4">Create An Account</h1>
 
-                          <form class="mx-1 mx-md-4" action="/moffat-bay/process.php" method="post">
+                          <form class="mx-4 mx-md-4" action="/moffat-bay/process.php" method="post">
 
-                            <div class="bg-dark">
+                            <div class="bg-dark py-4 px-4" id="formBackground">
 
                               <div class="d-flex flex-row align-items-center mb-4">
 

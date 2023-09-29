@@ -63,8 +63,7 @@
 
     <?php
 
-        include 'loginPage.php';
-        include 'createAccountForm.php';
+     
 
     ?>
 
