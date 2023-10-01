@@ -167,7 +167,9 @@
         <button id="cancel" href="index.php"> CANCEL </button>
     </form>
 
-    <a href="sessionTest.php"> session variables</a>
+    <!-- Testing Purposes
+        <a href="sessionTest.php"> session variables</a>
+        -->
 </section>
 
 </div>

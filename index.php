@@ -137,7 +137,7 @@ if(isset($_SESSION['login'])){
 
                         <div class="col mt-5">
 
-                            <div class="row" style="">
+                            <div class="row" >
 
                                 <div class="opacity-75 rounded-pill text-center" style="background: rgba(255,255,255,0.75);">
                             
@@ -155,10 +155,12 @@ if(isset($_SESSION['login'])){
                             </div>
 
                         </div>
-
+                            <!-- Testing purposes
                         <div id="currentReservations">
+
+                        <!-- <div id="currentReservations">
                             <?php include('currentRes.php') ?>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
@@ -201,6 +203,7 @@ if(isset($_SESSION['login'])){
             <div id="attractionsSection">
 
             <h3 id="attractionText">WE SUGGEST THE FOLLOWING LOCAL ATTRACTIONS:</h3>
+            <p>(all links open in a new tab)</p>
 
                 <div class="panelContainer">
                     <div class="panel active" onclick="setPanel1Links()" onload="setPanel1Links()" style="background-position: center; background-image: url(attractionImages/horseArmy.jpg);">
@@ -225,17 +228,17 @@ if(isset($_SESSION['login'])){
 
                     <div class="linkItem">
                         <img id="link1Image" class="linkImage" src="attractionImages/curling.jpg"><br>
-                        <a id="link1" class="attractionLinks" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1"> Awesome Curling Experience! </a><br>
+                        <a id="link1" class="attractionLinks" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1" target="_blank"> Awesome Curling Experience! </a><br>
                     </div>
 
                     <div class="linkItem">
                         <img id="link2Image" class="linkImage" src="attractionImages/horseTours.jpg"><br>
-                        <a id="link2" class="attractionLinks" href="https://www.equitours.com/#"> Horseback Riding Tours </a><br>
+                        <a id="link2" class="attractionLinks" href="https://www.equitours.com/#" target="_blank"> Horseback Riding Tours </a><br>
                     </div>
 
                     <div class="linkItem">
                         <img id="link3Image" class="linkImage" src="attractionImages/scubaSteve.jpeg"><br>
-                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/"> Scuba Diving at Ressurection Bay </a><br>
+                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/" target="_blank"> Scuba Diving at Ressurection Bay </a><br>
                     </div>
 
             </div>
@@ -281,7 +284,8 @@ if(isset($_SESSION['login'])){
             </section>
 
 
-                <a href="sessionTest.php">Testing the session variables</a>
+                <!-- Testing Purposes
+                    <a href="sessionTest.php">Testing the session variables</a> -->
         </div>
 
     </body>
