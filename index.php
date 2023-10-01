@@ -137,7 +137,7 @@ if(isset($_SESSION['login'])){
 
                         <div class="col mt-5">
 
-                            <div class="row" style="">
+                            <div class="row" >
 
                                 <div class="opacity-75 rounded-pill text-center" style="background: rgba(255,255,255,0.75);">
                             
