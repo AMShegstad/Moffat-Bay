@@ -73,6 +73,7 @@
                         <div class="row100">
                             <div class="inputBox">
                                 <input type="submit" name="btn-send" value="Send">
+                                <a href="index.php">Return to Home</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +90,7 @@
                     </div>
                     <div>
                         <span><ion-icon name="mail"></ion-icon></span>
-                        <a href="mailto:loremipsum@email.com">loremipsum@email.com</a>
+                        <a href="got1sssei@gmail.com">Moffat Bay Team</a>
                     </div>
                     <div>
                         <span><ion-icon name="call"></ion-icon></span>
