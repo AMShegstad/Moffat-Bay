@@ -8,7 +8,7 @@
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Contact Us Page</title>
+    <title>Moffat Bay Contact Us</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' crossorigin='anonymous'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -75,6 +75,7 @@
                                 <input type="submit" name="btn-send" value="Send">
                                 <a href="index.php">Return to Home</a>
                             </div>
+                            <a href="index.php"> Return to Home </button></a>
                         </div>
                     </div>
                 </form>
@@ -90,7 +91,7 @@
                     </div>
                     <div>
                         <span><ion-icon name="mail"></ion-icon></span>
-                        <a href="got1sssei@gmail.com">Moffat Bay Team</a>
+                        <a href="mailto:got1ssei@gmail.com">Moffat Bay Team</a>
                     </div>
                     <div>
                         <span><ion-icon name="call"></ion-icon></span>

@@ -155,6 +155,8 @@ if(isset($_SESSION['login'])){
                             </div>
 
                         </div>
+                            <!-- Testing purposes
+                        <div id="currentReservations">
 
                         <!-- <div id="currentReservations">
                             <?php include('currentRes.php') ?>
@@ -201,6 +203,7 @@ if(isset($_SESSION['login'])){
             <div id="attractionsSection">
 
             <h3 id="attractionText">WE SUGGEST THE FOLLOWING LOCAL ATTRACTIONS:</h3>
+            <p>(all links open in a new tab)</p>
 
                 <div class="panelContainer">
                     <div class="panel active" onclick="setPanel1Links()" onload="setPanel1Links()" style="background-position: center; background-image: url(attractionImages/horseArmy.jpg);">
@@ -281,7 +284,8 @@ if(isset($_SESSION['login'])){
             </section>
 
 
-                <!-- <a href="sessionTest.php">Testing the session variables</a> -->
+                <!-- Testing Purposes
+                    <a href="sessionTest.php">Testing the session variables</a> -->
         </div>
 
     </body>

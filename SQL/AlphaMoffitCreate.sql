@@ -11,19 +11,19 @@ phone VARCHAR(255),
 pass VARCHAR(255) NOT NULL,
 PRIMARY KEY(customerID));
 
+DROP TABLE IF EXISTS reservation;
 CREATE TABLE reservation(
-reservationID INT NOT NULL AUTO_INCREMENT,
-customerID INT,
-priceID INT,
-guestNumberID INT,
-roomConfigID INT,
-checkInDate DATE NOT NULL,
-checkOutDate DATE NOT NULL,
+reservationID int AUTO_INCREMENT NOT NULL,
+customerID int,
+priceID int,
+guestNumberID int,
+roomConfig ENUM ('double Full', 'queen', 'double Queen', 'king') NOT NULL,
+checkInDate date,
+checkOutDate date,
 email VARCHAR(70),
-PRIMARY KEY(reservationID),
-FOREIGN KEY(customerID) REFERENCES customers(customerID)
+PRIMARY KEY (reservationID),
+FOREIGN KEY (customerID) REFERENCES customers(customerID)
 );
-
 CREATE TABLE price(
 priceID INT NOT NULL,
 roomRate decimal NOT NULL);
@@ -33,5 +33,5 @@ guestNumberID INT NOT NULL,
 guestQty INT NOT NULL);
 
 CREATE TABLE roomConfig(
-roomConfigID INT NOT NULL,
+roomConfig INT NOT NULL,
 bedConfig VARCHAR(70) NOT NULL);
