@@ -99,7 +99,7 @@
 
     <div id="reservationThanksText">
 
-        <h1>Please confirm the details of your reservation...</h1>
+        <h1 class="text-center">Please confirm the details of your reservation...</h1>
 
     </div>
 </div>
@@ -163,8 +163,9 @@
             echo "<p>Total due at Check-in: $ {$_SESSION['reservationCost']}</p>";
         ?>
 
-        <button id="confirmReservation" type="submit"> Confirm Reservation </button>
-        <button id="cancel" href="index.php"> CANCEL </button>
+        <button class="btn btn-primary mb-5" id="confirmReservation" type="submit"> Confirm Reservation </button>
+        <br>
+        <a class="btn btn-warning mt-5" id="cancel" href="index.php"> CANCEL </a>
     </form>
 
     <!-- Testing Purposes

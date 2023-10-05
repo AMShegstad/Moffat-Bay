@@ -34,7 +34,7 @@ const sites = [
     "Horseback Riding Tours.",
     "Scuba Diving at Ressurection Bay.",
     "Alaska Hiking Adventures.",
-    "Top Kayayking and Canoeing Destinations.",
+    "Kayaking and Canoeing Destinations.",
     "Whale-Watching at Newport Landing.",
     "Tundra To Table: Inuit Culinary Experience.",
     "Kincaid Grill: Alaska Regional Cuisine.",

@@ -27,6 +27,8 @@ if(isset($_SESSION['login'])){
 
         <link rel="stylesheet" href="site.css">
 
+        <link rel="icon" href="images/red_fish.png">
+
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
         <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' crossorigin='anonymous'>
@@ -42,7 +44,7 @@ if(isset($_SESSION['login'])){
 
     </head>
 
-    <body>
+    <body class="">
 
         <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz' crossorigin='anonymous'></script>
 
@@ -50,7 +52,7 @@ if(isset($_SESSION['login'])){
 
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
         
-                    <a class="navbar-brand mx-3" href="#landingPage">
+                    <a class="navbar-brand mx-3" href="#landingPageSection">
                         
                         <img id="mbLogo" src="images/logo.png" width="160" height="70" class="d-inline-block align-top" alt="Moffat Bay Lodge">
                     
@@ -127,26 +129,26 @@ if(isset($_SESSION['login'])){
         <br>
         <br>
 
-        <div class="px-5">
+        <div class="px-5 py-5 bg-light">
 
-            <section class="section mt-5 bg-image img-fluid text-right" >
+            <section class="section mt-5 img-fluid text-right bg-dark" id="landingPageSection">
 
-                <div class="d-flex bg-image justify-content-center" id="landingPage">
+                <div class="d-flex justify-content-end" id="landingPage">
 
-                    <div class="" id="landingPageText" style="height: 100vh">
+                    <div class="mx-3" id="landingPageText">
 
                         <div class="col mt-5">
 
                             <div class="row" >
 
-                                <div class="opacity-75 rounded-pill text-center" style="background: rgba(255,255,255,0.75);">
+                                <div class="opacity-75 rounded-pill text-center my-5" style="background: rgba(255,255,255,0.75);">
                             
-                                    <div class="mx-5 my-5">
+                                    <div class="mx-4 my-5">
 
-                                        <p class="opacity-100" style="font-size: 120px;color: black;"><b>Making Memories</b></p>
+                                        <p class="opacity-100" style="font-size: 6vw;color: black;"><b>Making Memories</b></p>
 
 
-                                        <p class="opacity-100" style="font-size: 105px; color: black;">That will last a lifetime!</p>
+                                        <p class="opacity-100" style="font-size: 4vw; color: black;">That will last a lifetime!</p>
 
                                     </div>
                                 
@@ -167,40 +169,13 @@ if(isset($_SESSION['login'])){
 
             </section>
 
-            <section class="section mt-5 text-center" id="aboutUs">
+        </div>
 
-                <div class="about-us-wrap">
-                    <img class="about-us-bg" src="" alt="">
-                
-                    <div class="about-content">
-                        <h1>About Us</h1>
-                        <br>
-                        <hr>
-                        <br>
-                        <h2>Our Location</h2>
-                        <br>
-                        <p>The Moffat Bay Lodge and Marina is a luxurious, 118 acre private retreat nestled on the southern shore of Joviedsa Island. The lodge overlooks the pristine beauty of the Moffat Bay which is the starting point for many vessels traveling across the seas.</p>
+        <div class="px-5 bg-dark">
 
-                        <p>The main Lodge features spacious updated rooms, as well as an indoor pool, and lounge ran by ICE certified mixologist Dwayne Denair. Laundry service is availible on weekdays. Updated rooms include kitchenettes, private bathrooms, electric fireplaces, air conditioning, hard wood floors throughout, vaulted ceilings with extravagant woodwork from local sculptors, private porch  area, 65" flat screen televisions, and fiber internet connection.</p>
+            <section class="section mt-5 mb-5 text-center" id="attractions">
 
-                        <p>The surrounding area provides guests with the opportunity to see deer, wild turkey, beaver, ducks, red tail hawks, red tail fox, Canadian geese, American Bald Eagle, and the black-footed ferret all in thier natural habitat. All we ask is that your interactions with the native wildlife be limited to your camera shutters.</p>
-
-                        <h2>Our History</h2>
-                        <br>
-                        <p>First Nations Development Committee was founded in 2020 by four friends Alexander Shegstad, Bryan Moten, Andrew McCloud, and Timmy Bell. After extreme consideration on locations the friends decided on Moffat Bay. Plans were presented and approved by the Joviedsa Island Council in 2022. Construction began in February 2023 and is nearing completion for this coming season.</p>
-                        
-                        <hr>
-                        <br>
-                        <br>
-                        <h3>Click <a href="contact.php">HERE</a> to contact our the Moffat Bay Lodge team</h3>
-                    </div>
-                </div>    
-
-            </section>
-
-            <section class="section mt-5 text-center" id="attractions">
-
-            <div id="attractionsSection">
+            <div id="attractionsSection" class="mb-5">
 
             <h3 id="attractionText">WE SUGGEST THE FOLLOWING LOCAL ATTRACTIONS:</h3>
             <p>(all links open in a new tab)</p>
@@ -224,69 +199,138 @@ if(isset($_SESSION['login'])){
 
                 </div>
 
-                <div  id="linkContainer">
+                <div  id="linkContainer" class="mb-5">
 
                     <div class="linkItem">
-                        <img id="link1Image" class="linkImage" src="attractionImages/curling.jpg"><br>
-                        <a id="link1" class="attractionLinks" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1" target="_blank"> Awesome Curling Experience! </a><br>
+                        <img id="link1Image" class="linkImage" src="attractionImages/curling.jpg">
+                        <a id="link1" class="attractionLinks" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1" target="_blank"> Awesome Curling Experience! </a>
                     </div>
 
                     <div class="linkItem">
-                        <img id="link2Image" class="linkImage" src="attractionImages/horseTours.jpg"><br>
-                        <a id="link2" class="attractionLinks" href="https://www.equitours.com/#" target="_blank"> Horseback Riding Tours </a><br>
+                        <img id="link2Image" class="linkImage" src="attractionImages/horseTours.jpg">
+                        <a id="link2" class="attractionLinks" href="https://www.equitours.com/#" target="_blank"> Horseback Riding Tours </a>
                     </div>
 
                     <div class="linkItem">
-                        <img id="link3Image" class="linkImage" src="attractionImages/scubaSteve.jpeg"><br>
-                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/" target="_blank"> Scuba Diving at Ressurection Bay </a><br>
+                        <img id="link3Image" class="linkImage" src="attractionImages/scubaSteve.jpeg">
+                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/" target="_blank"> Scuba Diving at Ressurection Bay </a>
                     </div>
 
             </div>
 
-            <!--</div>-->
+            </div>
 
             <script src="attractions.js"></script>
             </section>
 
+        </div>
+
+        <div class="px-5 bg-light">
 
             <section class="section mt-5 text-center" id="registrationContainer">
 
-            <h1>Book Your Vacation Today!!!</h1>
+                <div class="mt-5">
 
-                <div class="registrationChild" id="thanks">
+                    <h1>Book Your Vacation Today!!!</h1>
 
-                </div>
+                    <form action="reservationSummary.php" method="POST" class="mt-5 mb-5" id="reservationForm">
 
-                <div class="registrationChild" id="form">
+                        <div class="d-flex flex-row gx-5">
 
-                    <form action="reservationSummary.php" method="POST">
-                        <select name="roomConfig">
-                            <option value="">Select room configuration:</option>
-                            <option value="1">Double Full</option>
-                            <option value="2">Queen</option>
-                            <option value="3">Double Queen</option>
-                            <option value="4">King</option>
-                        </select>
-                        <br>
-                        <br>
-                        <label for="checkIn"> Start Date: </label>
-                        <input type="date" name="checkIn"><br>
-                        <br>
-                        <label for="checkOut"> End Date: </label>
-                        <input type="date" name="checkOut"><br>
-                        <br>
-                        <button class="btn btn-primary btn-block" id="reserve" type="submit">Reserve Now!</button>
+                            <div class="p-3 d-flex flex-column mt-2 w-25">
+
+                                <label for="roomConfig" id="resFormLabel"><b>Room Configuration:</b></label>
+
+                                <select name="roomConfig" class="form-control">
+                                    <option value="">Select room configuration:</option>
+                                    <option value="1">Double Full</option>
+                                    <option value="2">Queen</option>
+                                    <option value="3">Double Queen</option>
+                                    <option value="4">King</option>
+                                </select>
+
+                            </div>
+
+                            <div class="p-3 d-flex flex-column mt-2 w-25">
+
+                                <label for="checkIn" id="resFormLabel"><b>Start Date:</b></label>
+
+                                <input type="date" name="checkIn" class="form-control">
+
+                            </div>
+
+                            <div class="p-3 d-flex flex-column mt-2 w-25">
+                                
+                                <label for="checkOut" id="resFormLabel"><b>End Date:</b></label>
+
+                                <input type="date" name="checkOut" class="form-control">
+
+                            </div>
+
+                            <div class="p-3 d-flex flex-column mt-2 w-25 justify-content-end">
+
+                                <button class="btn btn-primary" id="reserve" type="submit">Reserve</button>
+
+                            </div>
+
+                        </div>
+
                     </form>
-                    <br>
 
                 </div>
 
             </section>
+
+        </div>
+
+        <div class="px-5 bg-dark">
+
+            <section class="section mt-5 text-center" id="aboutUs">
+
+                <div class="about-us-wrap mb-5">
+                
+                    <div class="about-content">
+
+                        <h1 class="mx-3">About Us</h1>
+
+                        <div class="border border-light">
+
+                            <div class="mx-5 my-5" id="aboutBody">
+
+                                <p>The Moffat Bay Lodge and Marina is a luxurious, 118 acre private retreat nestled on the southern shore of Joviedsa Island. The lodge overlooks the pristine beauty of the Moffat Bay which is the starting point for many vessels traveling across the seas.</p>
+
+                                <p>The main Lodge features spacious updated rooms, as well as an indoor pool, and lounge ran by ICE certified mixologist Dwayne Denair. Laundry service is availible on weekdays. Updated rooms include kitchenettes, private bathrooms, electric fireplaces, air conditioning, hard wood floors throughout, vaulted ceilings with extravagant woodwork from local sculptors, private porch  area, 65" flat screen televisions, and fiber internet connection.</p>
+
+                                <p>The surrounding area provides guests with the opportunity to see deer, wild turkey, beaver, ducks, red tail hawks, red tail fox, Canadian geese, American Bald Eagle, and the black-footed ferret all in thier natural habitat. All we ask is that your interactions with the native wildlife be limited to your camera shutters.</p>
+
+                                <h2>Our History</h2>
+                                <br>
+                                <p>First Nations Development Committee was founded in 2020 by four friends Alexander Shegstad, Bryan Moten, Andrew McCloud, and Timmy Bell. After extreme consideration on locations the friends decided on Moffat Bay. Plans were presented and approved by the Joviedsa Island Council in 2022. Construction began in February 2023 and is nearing completion for this coming season.</p>
+
+                            </div>
+
+                        </div>
+                            
+                        <br>
+                        <br>
+                        <h3>Click <a href="contact.php" style="text-decoration: none; visited: none" target="_blank">HERE</a> to contact our the Moffat Bay Lodge team</h3>
+                    </div>
+                </div>    
+
+            </section>
+
+        </div>
 
 
                 <!-- Testing Purposes
                     <a href="sessionTest.php">Testing the session variables</a> -->
         </div>
+
+        <footer class="bg-dark" style="bottom: 0">
+
+            
+
+        </footer>
 
     </body>
 
