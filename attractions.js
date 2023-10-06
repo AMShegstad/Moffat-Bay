@@ -32,7 +32,7 @@ var panel4text = document.getElementById("panel4text");
 const sites = [
     "Awesome Curling Experience!",
     "Horseback Riding Tours.",
-    "Scuba Diving at Ressurection Bay.",
+    "Scuba Diving",
     "Alaska Hiking Adventures.",
     "Kayaking and Canoeing Destinations.",
     "Whale-Watching at Newport Landing.",

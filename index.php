@@ -129,7 +129,7 @@ if(isset($_SESSION['login'])){
         <br>
         <br>
 
-        <div class="px-5 py-5 bg-light">
+        <div class="px-5 py-5">
 
             <section class="section mt-5 img-fluid text-right bg-dark" id="landingPageSection">
 
@@ -171,14 +171,14 @@ if(isset($_SESSION['login'])){
 
         </div>
 
-        <div class="px-5 bg-dark">
+        <div class="p-5 h-100 bg-dark">
 
-            <section class="section mt-5 mb-5 text-center" id="attractions">
+            <section class="section mb-5 text-center" id="attractions">
 
             <div id="attractionsSection" class="mb-5">
 
             <h3 id="attractionText">WE SUGGEST THE FOLLOWING LOCAL ATTRACTIONS:</h3>
-            <p>(all links open in a new tab)</p>
+            <p style="color: white">(all links open in a new tab)</p>
 
                 <div class="panelContainer">
                     <div class="panel active" onclick="setPanel1Links()" onload="setPanel1Links()" style="background-position: center; background-image: url(attractionImages/horseArmy.jpg);">
@@ -203,17 +203,20 @@ if(isset($_SESSION['login'])){
 
                     <div class="linkItem">
                         <img id="link1Image" class="linkImage" src="attractionImages/curling.jpg">
+                        <br>
                         <a id="link1" class="attractionLinks" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1" target="_blank"> Awesome Curling Experience! </a>
                     </div>
 
                     <div class="linkItem">
                         <img id="link2Image" class="linkImage" src="attractionImages/horseTours.jpg">
+                        <br>
                         <a id="link2" class="attractionLinks" href="https://www.equitours.com/#" target="_blank"> Horseback Riding Tours </a>
                     </div>
 
                     <div class="linkItem">
                         <img id="link3Image" class="linkImage" src="attractionImages/scubaSteve.jpeg">
-                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/" target="_blank"> Scuba Diving at Ressurection Bay </a>
+                        <br>
+                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/" target="_blank"> Scuba Diving</a>
                     </div>
 
             </div>
@@ -225,7 +228,17 @@ if(isset($_SESSION['login'])){
 
         </div>
 
-        <div class="px-5 bg-light">
+        <div class="px-5">
+
+            <div class="mt-5 mb-5">
+
+                <?php
+                
+                    include 'roomCarousel.php';
+
+                ?>
+
+            </div>
 
             <section class="section mt-5 text-center" id="registrationContainer">
 
