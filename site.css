@@ -459,6 +459,13 @@ body {
     border-radius: 15px;
     animation-name: linkChange;
     transition: 2s;
+    
+}
+
+.linkImage:hover {
+     
+        transform: scale(1.25); 
+    
 }
 
 .linkItem > a {
