@@ -47,6 +47,8 @@ if(isset($_SESSION['login'])){
 
         <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz' crossorigin='anonymous'></script>
 
+        <script src="actions.js"></script>
+
         <div class="topbar" id="navbar-items">
 
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
@@ -103,7 +105,7 @@ if(isset($_SESSION['login'])){
 
                             <ul class="nav navbar-nav navbar-right mx-3">
 
-                                <a class="nav-link" href="logout.php" type="button">Logout</a>
+                                <button type="button" class="nav-link" onclick="checkLogout()" type="button">Logout</a>
 
                             </ul>
 
@@ -114,8 +116,6 @@ if(isset($_SESSION['login'])){
                         ?>
             
             </nav>
-
-            <script src="actions.js"></script>
 
         </div>
 
@@ -285,7 +285,25 @@ if(isset($_SESSION['login'])){
 
                             <div class="p-3 d-flex flex-column mt-2 w-25 justify-content-end">
 
-                                <button class="btn btn-primary" id="reserve" type="submit">Reserve</button>
+                                <?php
+                                    if(isset($_SESSION["login"])){
+
+                                        $_SESSION["lastLocation"] = "#registrationContainer";
+
+                                        ?>
+                                        <button class="btn btn-primary" id="reserve" type="submit" name=""reserveBtn">Reserve</button>
+                                        <?php
+
+                                    }else{
+
+                                        ?>
+
+                                        <a class="btn btn-primary" type="button" id="reserve" name="reserveBtn" data-bs-toggle="modal" data-bs-target="#loginForm">Log in</a>
+
+                                        <?php
+
+                                    }
+                                ?>
 
                             </div>
 

@@ -1,7 +1,17 @@
 
 <!-- Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten -->
 
-<?php session_start() ?>
+<?php 
+
+session_start();
+
+if(!$_SESSION["login"]){
+
+    header("Location: index.php");
+
+}else{
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,3 +186,7 @@
 </div>
 </body>
 </html>
+
+<?php
+}
+?>
