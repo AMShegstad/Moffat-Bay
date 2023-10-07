@@ -12,7 +12,7 @@ Alpha Team is Alexander Shegstad, Andrew McCloud, Timmy Bell, and Bryan Moten
 }
 body
 {
-    background: linear-gradient(90deg,#0e3959 0%, #0e3959 30%, #03a9f5 30%, #03a9f5 100%);
+    background: linear-gradient(90deg,#01090e 0%, #01090e 30%, #fff 30%, #fff 100%);
 }
 .contactUs
 {
@@ -47,7 +47,7 @@ body
 .contact
 {
     padding: 40px;
-    background: #fff;
+    background: #aaa7a7;
     box-shadow: 0 5px 35px rgba(0,0,0,0.15);
 }
 .box
@@ -64,7 +64,7 @@ body
 }
 .contact h3
 {
-    color: #0e3959;
+    color: #01090e;
     font-weight: 500;
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -94,7 +94,7 @@ body
 }
 .inputBox span
 {
-    color:#18b7ff;
+    color:#333;
     margin-top: 10px;
     margin-bottom: 5px;
     font-weight: 500;
@@ -120,7 +120,7 @@ body
 }
 .inputBox input[type="submit"]
 {
-    background: #ff578b;
+    background: #333;
     color: #fff;
     border: none;
     font-size: 1.1em;
@@ -137,7 +137,7 @@ body
 /* info */
 .info
 {
-    background: #0e3959;
+    background: #01090e;
 }
 .info h3
 {
@@ -153,8 +153,8 @@ body
 {
     min-width: 40px;
     height: 40px;
-    color: #fff;
-    background: #18b7ff;
+    color: #333;
+    background: #aaa7a7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +208,7 @@ body
 {
     body
     {
-        background: #03a9f5;
+        background: #01090e;
     }
     .contactUs
     {
