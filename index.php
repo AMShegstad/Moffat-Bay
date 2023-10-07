@@ -339,11 +339,12 @@ if(isset($_SESSION['login'])){
                     <a href="sessionTest.php">Testing the session variables</a> -->
         </div>
 
-        <footer class="bg-dark" style="bottom: 0">
+<footer class="bg-dark" style=" text-align: center; position: fixed; bottom: 0; left: 0; padding: 10px 0; font-size: 14px; width: 100%;">
+    <div style="color: white; text-align: center; padding: 5px 0; font-size: 14px;">
+        &copy; <span style="font-weight: bold;">Moffat Bay Lodge 2023</span>
+    </div>
+</footer>
 
-            
-
-        </footer>
 
     </body>
 
