@@ -16,7 +16,6 @@ if(isset($_SESSION['login'])){
 
 ?>
 
-
 <!DOCTYPE html>
 
 <html lang='en'>
@@ -171,16 +170,16 @@ if(isset($_SESSION['login'])){
 
         </div>
 
-        <div class="p-5 h-100 bg-dark">
+        <div class="pb-5 h-100 bg-dark">
 
-            <section class="section mb-5 text-center" id="attractions">
+            <section class="section mb-5 mt-5 text-center bg-dark h-100" id="attractions">
 
             <div id="attractionsSection" class="mb-5">
 
-            <h3 id="attractionText">WE SUGGEST THE FOLLOWING LOCAL ATTRACTIONS:</h3>
+            <h3 id="attractionText" class="mt-5">WE SUGGEST THE FOLLOWING LOCAL ATTRACTIONS:</h3>
             <p style="color: white">(all links open in a new tab)</p>
 
-                <div class="panelContainer">
+                <div class="panelContainer bg-dark">
                     <div class="panel active" onclick="setPanel1Links()" onload="setPanel1Links()" style="background-position: center; background-image: url(attractionImages/horseArmy.jpg);">
                         <h3 id="panel1text" style="color: white"> Learn New Activities... </h3>
                     </div>
@@ -199,27 +198,31 @@ if(isset($_SESSION['login'])){
 
                 </div>
 
-                <div  id="linkContainer" class="mb-5">
+                <div id="attractionsContainer" class="bg-dark">
 
-                    <div class="linkItem">
-                        <img id="link1Image" class="linkImage" src="attractionImages/curling.jpg">
-                        <br>
-                        <a id="link1" class="attractionLinks" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1" target="_blank"> Awesome Curling Experience! </a>
+                    <div  id="linkContainer" class="mb-3 mt-3 w-100 bg-dark">
+
+                        <div class="linkItem">
+                            <img id="link1Image" class="linkImage" src="attractionImages/curling.jpg">
+                            <br>
+                            <a id="link1" class="attractionLinks mt-2" href="https://www.viator.com/tours/Montreal/Curling-4-Ever/d625-269817P1" target="_blank"> Awesome Curling Experience! </a>
+                        </div>
+
+                        <div class="linkItem">
+                            <img id="link2Image" class="linkImage" src="attractionImages/horseTours.jpg">
+                            <br>
+                            <a id="link2" class="attractionLinks" href="https://www.equitours.com/#" target="_blank"> Horseback Riding Tours </a>
+                        </div>
+
+                        <div class="linkItem">
+                            <img id="link3Image" class="linkImage" src="attractionImages/scubaSteve.jpeg">
+                            <br>
+                            <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/" target="_blank"> Scuba Diving</a>
+                        </div>
+
                     </div>
 
-                    <div class="linkItem">
-                        <img id="link2Image" class="linkImage" src="attractionImages/horseTours.jpg">
-                        <br>
-                        <a id="link2" class="attractionLinks" href="https://www.equitours.com/#" target="_blank"> Horseback Riding Tours </a>
-                    </div>
-
-                    <div class="linkItem">
-                        <img id="link3Image" class="linkImage" src="attractionImages/scubaSteve.jpeg">
-                        <br>
-                        <a id="link3" class="attractionLinks" href="https://divealaska.net/resurrection-bay-seward-alaska/" target="_blank"> Scuba Diving</a>
-                    </div>
-
-            </div>
+                </div>
 
             </div>
 
@@ -304,9 +307,11 @@ if(isset($_SESSION['login'])){
                 
                     <div class="about-content">
 
-                        <h1 class="mx-3">About Us</h1>
+                        <div class="border border-light mt-5 mb-3">
 
-                        <div class="border border-light">
+                            <h1 class="mx-3 my-4">About Us</h1>
+
+                            <hr class="w-50 mx-auto">
 
                             <div class="mx-5 my-5" id="aboutBody">
 
@@ -326,7 +331,7 @@ if(isset($_SESSION['login'])){
                             
                         <br>
                         <br>
-                        <h3>Click <a href="contact.php" style="text-decoration: none; visited: none" target="_blank">HERE</a> to contact our the Moffat Bay Lodge team</h3>
+                        <h3 class="mb-5">Click <a href="contact.php" style="text-decoration: none; visited: none" target="_blank">HERE</a> to contact the Moffat Bay Lodge team</h3>
                     </div>
                 </div>    
 

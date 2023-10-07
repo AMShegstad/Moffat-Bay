@@ -432,8 +432,6 @@ body {
 }
 
 .attractionLinks {
-    height: 26vh;
-    width: 30%;
     text-decoration: none;
     color: white;
     font-size: 2vw;
@@ -452,6 +450,10 @@ body {
 
 }
 
+#attractionsContainer{
+    width: 100%;
+}
+
 .linkImage {
     height: 12vw;
     min-height: 100px;
@@ -464,7 +466,8 @@ body {
 
 .linkImage:hover {
      
-        transform: scale(1.25); 
+        transform: scale(1.1); 
+        background-color: blue;
     
 }
 
@@ -486,6 +489,13 @@ body {
     background-color: lightgreen;
     border-radius: 300px;
     opacity: 0.8;
+    font-size: 2vw;
+
+}
+
+.carousel-caption{
+
+
 
 }
 
