@@ -8,7 +8,7 @@ session_start();
 require_once('config.php');
 
 if(isset($_POST)){
-    
+       
     // Defining the variables to be stored
 
     switch ($_SESSION['roomConfig']) {

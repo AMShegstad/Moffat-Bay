@@ -73,3 +73,19 @@ function openNavbar(){
 
 }
 
+function checkLogout(){
+
+    var result = confirm("Are you sure you want to log out?");
+
+    if(result){
+
+        location.href = "logout.php";
+
+    }else{
+
+        location.href = "index.php";
+
+    }
+
+}
+
